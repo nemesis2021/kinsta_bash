@@ -10,3 +10,4 @@ echo "PHP: $PHP_STAT";
 echo -e "=================\\n";
 echo -e "WordPress Detail\\n";
 echo -e "=================";
+ 
