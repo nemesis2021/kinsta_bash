@@ -14,7 +14,7 @@ echo -e "=================\\n";
 SITEURL=$(wp option get siteurl);
 HOMEURL=$(wp option get home);
 WPLOGIN=$(wp eval 'echo wp_login_url() . "\n";');
-WPPATH=$(wp eval 'echo wp_login_url() . "\n";');
+WPPATH=$(wp eval 'echo get_home_path();');
 
  echo "Site URL: $SITEURL";
  echo -e "Home URL: $HOMEURL\\n";
