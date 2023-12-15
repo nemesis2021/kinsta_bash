@@ -6,7 +6,7 @@ PHP_STAT=$(PHP_VERSION=$(php -v | tac | tail -n 1 | cut -d " " -f 2 | cut -c 1-3
 echo "Nginx: $NGINX_STAT";
 echo "MariaDB: $MARIA_STAT";
 echo "PHP: $PHP_STAT";
-uptime
+&& uptime
 
 echo -e "=================\\n";
 echo -e "WordPress Details\\n";
