@@ -7,6 +7,6 @@ echo "Nginx: $NGINX_STAT";
 echo "MariaDB: $MARIA_STAT";
 echo "PHP: $PHP_STAT";
 
-echo -e "=================\\";
-echo -e "WordPress Details\\";
+echo -e "=================\\n";
+echo -e "WordPress Details\\n";
 echo -e "=================";
