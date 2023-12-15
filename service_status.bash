@@ -11,4 +11,13 @@ echo -e "=================";
 echo -e "WordPress Details";
 echo -e "=================\\n";
  
+SITEURL=$(wp option get siteurl);
+HOMEURL=$(wp option get home);
+WPLOGIN=$(wp eval 'echo wp_login_url() . "\n";');
+
+ echo "Site URL: $SITEURL";
+ echo "Home URL: $HOMEURL";
+ echo "WP Login: $WPLOGIN";
+
+
 
