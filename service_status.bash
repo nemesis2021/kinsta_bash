@@ -9,5 +9,5 @@ echo "PHP: $PHP_STAT";
 && uptime
 
 echo -e "=================\\n";
-echo -e "WordPress Details\\n";
+echo -e "WordPress Detail\\n";
 echo -e "=================";
