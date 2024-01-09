@@ -20,10 +20,19 @@ SITEURL=$(wp option get siteurl);
 HOMEURL=$(wp option get home);
 WPLOGIN=$(wp eval 'echo wp_login_url() . "\n";');
 WPPATH=$(wp eval 'echo get_home_path();');
+WPVER=$(wp core version);
+WPMULTI=$(wp site list);
 
  echo "Site URL: $SITEURL";
  echo -e "Home URL: $HOMEURL\\n";
  echo "WP Login: $WPLOGIN";
  echo -e "WP PATH: $WPPATH";
-
+ echo -e "WP Version: $WPVER";
+ 
+if [[ $WPMULTI =~ *"not a multisite"* ]];
+then
+    echo -e "Multisite: False";
+else
+    echo -e "Multisite: Yes";
+fi
 
