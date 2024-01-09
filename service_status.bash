@@ -29,7 +29,7 @@ WPMULTI=$(wp site list);
  echo -e "WP PATH: $WPPATH";
  echo -e "WP Version: $WPVER";
  
-if [[ $WPMULTI =~ *"not a multisite"* ]];
+if [[ $WPMULTI == *"not a multisite"* ]];
 then
     echo -e "Multisite: False";
 else
