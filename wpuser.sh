@@ -17,7 +17,7 @@ if [ -n "$USER_ID" ]; then
     
     # Schedule the cron event to expire the user after 30 minutes
     echo "Scheduling expiration for the user $USERNAME in 30 minutes..."
-    wp cron event schedule user_expire_event "$EXPIRATION" --user_id=$USER_ID
+    wp cron event schedule user_expire_event "$EXPIRATION" --args="[$USER_ID]"
     
     # Check if the cron event was scheduled
     if [ $? -eq 0 ]; then
