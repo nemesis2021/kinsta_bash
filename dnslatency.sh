@@ -9,6 +9,8 @@ curl -s -o /dev/null -w "msn.com Total: %{time_total}s\n" https://msn.com
 echo "--------------------"
 echo -e "\033[31mImagick Version:\033[0m"
 grep mageMagickVersion /kinsta/main.conf && dpkg -l |grep imageMagickVersion=
+echo -e "\033[31mModified Date:\033[0m"
+find /usr/lib/php/*/ -name imagick.so -exec ls -lat {} \; | awk '{print $6, $7, $8, $9}'
 echo "--------------------"
 
 echo "--------------------"
